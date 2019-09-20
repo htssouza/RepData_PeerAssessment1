@@ -1,4 +1,15 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: 'Reproducible Research: Peer Assessment 1'
+subtitle: by Henrique Souza (github.com/htssouza)
+output:
+  html_document:
+    keep_md: yes
+    pandoc_args:
+    - +RTS
+    - -K64m
+    - -RTS
+  pdf_document: default
+---
 
 ## Loading and preprocessing the data
 
@@ -67,7 +78,7 @@ hist(daily_steps$steps,
      breaks = 20)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -124,7 +135,7 @@ plot(per_interval$interval,
      col = c("red"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
   
 2. Which 5-minute interval, on average across all the days in the dataset,
 contains the maximum number of steps?
@@ -205,7 +216,7 @@ hist(daily_steps_fill$steps,
      breaks = 20)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 ```r
 average_steps_per_day_fill <- mean(daily_steps_fill$steps)
@@ -279,13 +290,7 @@ per_interval_n_weekday <- aggregate(
 
 library(plyr)
 library(ggplot2)
-```
 
-```
-## Warning: package 'ggplot2' was built under R version 3.1.3
-```
-
-```r
 qplot(
   interval,
   steps,
@@ -294,7 +299,7 @@ qplot(
   geom = c("line"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
  
  
 
